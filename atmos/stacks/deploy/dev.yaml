@@ -4,11 +4,4 @@ vars:
   stage: dev
 
 import:
-  - catalog/station
-
-components:
-  terraform:
-    station:
-      vars:
-        location: Stockholm
-        lang: se
+  - catalog/msk1-stack

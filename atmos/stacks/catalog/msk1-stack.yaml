@@ -2,12 +2,9 @@
 
 components:
   terraform:
-    station:
+    msk1:
       metadata:
-        component: weather
+        component: msk
       vars:
-        location: Los Angeles
-        lang: en
-        format: ''
-        options: '0'
-        units: m
+        cluster_name: msk1
+        number_of_brokers: 3
