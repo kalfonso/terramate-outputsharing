@@ -1,11 +1,8 @@
-# Now write this to a file (as a simplified example of an MSK resource)
 locals {
-  broker_configs = [
-    for i in range(1, var.number_of_brokers + 1) : "broker${i}"
-  ]
+  json_data = jsondecode(file("msk.txt"))
 }
 
-resource "local_file" "msk_cluster" {
-  filename = "msk.${var.stage}.txt"
-  content  = jsonencode(local.broker_configs)
+resource "local_file" "msk_istio_config" {
+  filename = "msk-istio.txt"
+  content  = jsonencode(local.json_data)
 }

@@ -1,7 +1,7 @@
-variable "cluster_name" {
+variable "argocd_app_name" {
   type = string
 }
 
-variable "number_of_brokers" {
-  type = number
+variable "brokers" {
+  type = list(string)
 }
