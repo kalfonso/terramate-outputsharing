@@ -1,4 +1,4 @@
-script "terraform" "msk-deploy" {
+script "msk-deploy" {
   job {
     name        = "MSK deploy"
     description = "Initialize, validate, plan, and apply Terraform changes to MSK stack."
