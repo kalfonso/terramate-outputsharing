@@ -1,5 +1,5 @@
 output "brokers" {
-  backend   = "local"
+  backend   = "default"
   value     = local.brokers
   sensitive = false
 }

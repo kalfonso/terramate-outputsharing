@@ -1,5 +1,5 @@
 input "brokers" {
-  backend       = "local"
+  backend       = "default"
   from_stack_id = "msk"
   value         = outputs.brokers.value
 }
