@@ -6,6 +6,6 @@ locals {
 }
 
 resource "local_file" "msk_cluster" {
-  filename = "msk.txt"
+  filename = "${path.module}/msk.txt"
   content  = jsonencode(local.brokers)
 }

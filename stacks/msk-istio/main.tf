@@ -1,5 +1,5 @@
 locals {
-  json_data = jsondecode(file("msk.txt"))
+  json_data = jsonencode(var.brokers)
 }
 
 resource "local_file" "msk_istio_config" {
